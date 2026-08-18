@@ -69,7 +69,7 @@ Feature scales differ by seven orders of magnitude — `Y_Maximum` spans ≈ 1.3
 
 **https://github.com/2025ac05226-dev/steel-fault-classifier**
 
-**Live Streamlit App:** _(deploying — link added after Streamlit Cloud deploy)_
+**Live Streamlit App:** https://steel-fault-classifier-2025ac05226.streamlit.app
 
 ### Repository structure
 
@@ -179,7 +179,7 @@ Two additional measurements were taken to explain *why* the models rank the way 
 
 ## Streamlit Application
 
-**Live app:** _(deploying — link added after Streamlit Cloud deploy)_
+**Live app:** https://steel-fault-classifier-2025ac05226.streamlit.app
 
 The app implements all four required features:
 
