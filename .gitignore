@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.venv/
+ml_env/
+.DS_Store
+.ipynb_checkpoints/
+.streamlit/secrets.toml
