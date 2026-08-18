@@ -1,0 +1,56 @@
+{
+  "Logistic Regression": {
+    "Accuracy": 0.6584,
+    "AUC": 0.887,
+    "Precision": 0.6956,
+    "Recall": 0.6584,
+    "F1": 0.6492,
+    "MCC": 0.5956,
+    "FitSeconds": 0.07
+  },
+  "Decision Tree": {
+    "Accuracy": 0.6502,
+    "AUC": 0.8398,
+    "Precision": 0.6777,
+    "Recall": 0.6502,
+    "F1": 0.648,
+    "MCC": 0.5763,
+    "FitSeconds": 0.02
+  },
+  "kNN": {
+    "Accuracy": 0.7305,
+    "AUC": 0.9032,
+    "Precision": 0.7293,
+    "Recall": 0.7305,
+    "F1": 0.7233,
+    "MCC": 0.6539,
+    "FitSeconds": 0.0
+  },
+  "Naive Bayes": {
+    "Accuracy": 0.6337,
+    "AUC": 0.8745,
+    "Precision": 0.6806,
+    "Recall": 0.6337,
+    "F1": 0.6268,
+    "MCC": 0.5673,
+    "FitSeconds": 0.0
+  },
+  "Random Forest (Ensemble)": {
+    "Accuracy": 0.7737,
+    "AUC": 0.9354,
+    "Precision": 0.7833,
+    "Recall": 0.7737,
+    "F1": 0.7729,
+    "MCC": 0.7061,
+    "FitSeconds": 0.67
+  },
+  "Gradient Boosting (Ensemble)": {
+    "Accuracy": 0.7654,
+    "AUC": 0.931,
+    "Precision": 0.7677,
+    "Recall": 0.7654,
+    "F1": 0.7647,
+    "MCC": 0.6988,
+    "FitSeconds": 6.76
+  }
+}
