@@ -133,6 +133,33 @@ Because this is a 7-class problem, **Precision, Recall and F1 are weighted avera
 
 *(Bold = best score in that column. All figures are reproducible by running `python model/train_models.py`.)*
 
+### Reproducibility note
+
+The comparison table above was produced on the development machine with
+`scikit-learn==1.6.1` (the version pinned in `requirements.txt`). The same
+script was re-run on the BITS Virtual Lab, whose Anaconda distribution ships a
+different scikit-learn build, giving:
+
+| ML Model Name | Accuracy | AUC | Precision | Recall | F1 | MCC |
+|---|---:|---:|---:|---:|---:|---:|
+| Logistic Regression | 0.6584 | 0.8870 | 0.6956 | 0.6584 | 0.6492 | 0.5956 |
+| Decision Tree | 0.6502 | 0.8398 | 0.6777 | 0.6502 | 0.6480 | 0.5763 |
+| kNN | 0.7305 | 0.9032 | 0.7293 | 0.7305 | 0.7233 | 0.6539 |
+| Naive Bayes | 0.6337 | 0.8745 | 0.6806 | 0.6337 | 0.6268 | 0.5673 |
+| Random Forest (Ensemble) | 0.7778 | 0.9352 | 0.7880 | 0.7778 | 0.7775 | 0.7116 |
+| Gradient Boosting (Ensemble) | 0.7654 | 0.9333 | 0.7674 | 0.7654 | 0.7651 | 0.6981 |
+
+The four non-ensemble models reproduce **bit-for-bit identically**. Only the two
+ensembles differ, and by less than 0.5 percentage points. This is expected
+rather than a defect: `random_state` is fixed throughout, but Random Forest
+(bootstrap resampling) and Gradient Boosting (`subsample=0.9`) draw from the RNG
+during fitting, and the order in which scikit-learn consumes that stream changes
+between releases. The ranking of the six models, and every conclusion drawn in
+the observations below, is unchanged across both environments — which is the
+stronger reproducibility claim.
+
+---
+
 ### Supporting diagnostics
 
 Two additional measurements were taken to explain *why* the models rank the way they do.
